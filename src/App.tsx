@@ -19,9 +19,11 @@ function App() {
           <span className="checkmark"></span>
         </label>
         <button className="button">Enter</button>
-        {generate(offset, password)}
-        <b className="rezultat">Result: </b>
-        <input></input>
+        <div className="resultContainer">
+          <b className="result">Result: </b>
+          
+          <p>{generate(offset, password)}</p>
+        </div>
       </div>
     </div>
   );
