@@ -22,7 +22,7 @@ function App() {
         <div className="resultContainer">
           <b className="result">Result: </b>
           
-          <p>{generate(offset, password,true)}</p>
+          <p>{generate(offset, password,true,3)}</p>
         </div>
       </div>
     </div>
