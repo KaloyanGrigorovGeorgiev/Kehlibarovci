@@ -2,10 +2,11 @@
   height: 100vh;
   background-image: url("C:\Users\User12\Desktop\Kehlibarovci\public\background.png");
   background-size: cover;
+  font-size: 20px;
 }
 .container {
   display: grid;
-  gap: 50px 100px;
+  grid-template-rows: 1fr 1fr 1fr;
   position: absolute;
   margin: auto;
   left: 0;
@@ -18,28 +19,21 @@
   border-radius: 16px;
   padding: 32px;
 }
-.input {
-  padding-left: 90px;
-  text-size-adjust: 300px;
-}
-.numberinput {
-  padding-left: 60px;
-  padding-top: 250px;
-  text-size-adjust: 300px;
-}
-.checkbox {
-  padding-left: 80px;
-  text-size-adjust: 300px;
-}
-.button {
-  max-width: 5%;
-  margin-left: 80px;
-}
-.result {
-}
 .resultContainer {
   background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 5px;
   overflow-wrap: break-word;
+  border-radius: 16px;
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.numberinput {
+  max-width: 50px;
+}
+.password {
+  min-height: 25px;
 }
