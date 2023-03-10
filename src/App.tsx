@@ -7,6 +7,7 @@ function App() {
   const [password, setPassword] = useState('');
   const [offset, setOffset] = useState(1);
   const [withSalt, setWithSalt] = useState(false);
+  const [rounds, setRounds] = useState(1);
   return (
     <div className="App">
       <div className="container">
@@ -23,10 +24,14 @@ function App() {
             <input type="checkbox" onChange={() => setWithSalt(!withSalt)}></input>
             <b>with salt</b>
           </div>
+          <div>
+            <b>Rounds: </b>
+            <input type="number" className="numberinput" min={1} value={rounds} onChange={event => setRounds(Number(event.target.value))}></input>
+          </div>
         </div>
         <div className="resultContainer">
           <b className="result">Result: </b>
-          <p>{generate(offset, password, withSalt,3)}</p>
+          <p>{generate(offset, password, withSalt, rounds)}</p>
         </div>
       </div>
     </div>
